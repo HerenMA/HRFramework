@@ -10,11 +10,11 @@ Pod::Spec.new do |s|
     s.platform     = :ios, '7.0'
     s.ios.deployment_target = "7.0"
     s.frameworks = "Foundation", "UIKit"
-    s.vendored_frameworks = 'HRFramework/Classes/HRFramework.framework'
+    s.vendored_frameworks = "HRFramework/Classes/HRFramework.framework"
 
-    s.dependency "AFNetworking", "~> 3.1.0"
-    s.dependency "YYModel", "~> 1.0.4"
-    s.dependency "YYCache", "~> 1.0.4"
-    s.dependency "YYModel", "~> 1.0.4"
-    s.dependency "YYWebImage", "~> 1.0.5"
+    s.dependency 'AFNetworking', '~> 3.1.0'
+    s.dependency 'YYModel', '~> 1.0.4'
+    s.dependency 'YYCache', '~> 1.0.4'
+    s.dependency 'YYModel', '~> 1.0.4'
+    s.dependency 'YYWebImage', '~> 1.0.5'
 end

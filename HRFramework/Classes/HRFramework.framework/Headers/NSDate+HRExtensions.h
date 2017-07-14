@@ -13,6 +13,12 @@
  */
 @interface NSDate (HRExtensions)
 
+/**
+ 获取系统当前时间
+
+ @return <#return value description#>
+ */
++ (NSString *)localDateString;
 
 /**
  转换成本地日期格式（中国标准）

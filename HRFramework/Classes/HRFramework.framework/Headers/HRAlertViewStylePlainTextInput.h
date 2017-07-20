@@ -44,9 +44,26 @@ typedef void (^HRAlertViewStylePlainTextInputCancelBlock)();
  显示
 
  @param title 标题
+ @param text 文本
+ */
+- (void)showWithTitle:(NSString *)title text:(NSString *)text;
+
+/**
+ 显示
+
+ @param title 标题
  @param message 信息
  */
 - (void)showWithTitle:(NSString *)title message:(NSString *)message;
+
+/**
+ 显示
+ 
+ @param title 标题
+ @param text 文本
+ @param placeholder 占位符
+ */
+- (void)showWithTitle:(NSString *)title text:(NSString *)text placeholder:(NSString *)placeholder;
 
 /**
  显示

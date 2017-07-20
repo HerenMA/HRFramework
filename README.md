@@ -1,2 +1,2 @@
 # HRFramework
-a HerenMA framework for iOS.
+HerenMA framework for iOS.

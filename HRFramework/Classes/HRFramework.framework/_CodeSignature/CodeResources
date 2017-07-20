@@ -18,7 +18,7 @@
 		</data>
 		<key>Headers/HRFramework.h</key>
 		<data>
-		gYWDdejoqKb4P4/MlPM6/CjOD20=
+		TblVeQ3Jcwi9H0KuYVq/aC0BX64=
 		</data>
 		<key>Headers/HRImagePickerController.h</key>
 		<data>
@@ -36,13 +36,17 @@
 		<data>
 		bgeWYEd7/DxYgpbXzEyq4jSJBAk=
 		</data>
+		<key>Headers/HROutputView.h</key>
+		<data>
+		QqrrYn/vZtwHJi5N8aZanKJXekg=
+		</data>
 		<key>Headers/HRSkinManager.h</key>
 		<data>
 		pUBxgOdoeU4+ZapR23tFSuqYuPs=
 		</data>
 		<key>Headers/HRSysAuthorityUtil.h</key>
 		<data>
-		AMD5BEhsZgB9pc3249E0UVCdw5U=
+		g8ohC/C8RnYno+Gm0caegyH6pDQ=
 		</data>
 		<key>Headers/HRTabBarController.h</key>
 		<data>
@@ -64,6 +68,10 @@
 		<data>
 		LijYnHul9JPKyavXinUqJBg6+FQ=
 		</data>
+		<key>Headers/HRValidateUtil.h</key>
+		<data>
+		p4GXFBmlyGiOKIILxI/yK6X6itA=
+		</data>
 		<key>Headers/HRWebView.h</key>
 		<data>
 		6nSGAE79XDotonaQaVdeADzWtjU=
@@ -74,11 +82,15 @@
 		</data>
 		<key>Headers/NSDate+HRExtensions.h</key>
 		<data>
-		DfyQApNbsLIN2JE4n2qr/o80Qs0=
+		Z1LJuHAyqlqXy5X2MJ+uEBpXnZ8=
 		</data>
 		<key>Headers/NSDictionary+HRExtensions.h</key>
 		<data>
 		Tfq+QyO0MkJHqlwNrq6xqOajdNk=
+		</data>
+		<key>Headers/NSString+HRExtensions.h</key>
+		<data>
+		ICjRPEdCOiSkKaSSTfXHq3ijTJM=
 		</data>
 		<key>Headers/UIActionSheet+Blocks.h</key>
 		<data>
@@ -152,11 +164,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gYWDdejoqKb4P4/MlPM6/CjOD20=
+			TblVeQ3Jcwi9H0KuYVq/aC0BX64=
 			</data>
 			<key>hash2</key>
 			<data>
-			59yojIYl5B6V5t85LiZPbUeluUhtHH9sj4jrxd1yu9M=
+			XFt42jftd2YpDiPgq48+zBS1msmRS0HU2wuZAH2yIQ8=
 			</data>
 		</dict>
 		<key>Headers/HRImagePickerController.h</key>
@@ -203,6 +215,17 @@
 			FYfCFGj0e6iq3BzdqTXfo2QtMNPJ5ziILghDLpJal2U=
 			</data>
 		</dict>
+		<key>Headers/HROutputView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			QqrrYn/vZtwHJi5N8aZanKJXekg=
+			</data>
+			<key>hash2</key>
+			<data>
+			0tNBoIJhp7M/7KZTKjy4gLrN9DT+4jpow4UdK0zPrVA=
+			</data>
+		</dict>
 		<key>Headers/HRSkinManager.h</key>
 		<dict>
 			<key>hash</key>
@@ -218,11 +241,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AMD5BEhsZgB9pc3249E0UVCdw5U=
+			g8ohC/C8RnYno+Gm0caegyH6pDQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			tleF+T7Hqnzm8maLaCYEAE4NMNFp6+Xdh6HpcJnb95k=
+			wIq6Fd7ThtOXhAWY5KZjRnycvH1EbnPQ+PJYinqc+pw=
 			</data>
 		</dict>
 		<key>Headers/HRTabBarController.h</key>
@@ -280,6 +303,17 @@
 			+2VBl7iCKnA9rNNeRZWxHrYdrxPXeoJWuzSyzXj+uUc=
 			</data>
 		</dict>
+		<key>Headers/HRValidateUtil.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			p4GXFBmlyGiOKIILxI/yK6X6itA=
+			</data>
+			<key>hash2</key>
+			<data>
+			O4inB+SDr9/1ojzK69iS0y0QQ+UqR/Cvs37k+lCce+I=
+			</data>
+		</dict>
 		<key>Headers/HRWebView.h</key>
 		<dict>
 			<key>hash</key>
@@ -306,11 +340,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DfyQApNbsLIN2JE4n2qr/o80Qs0=
+			Z1LJuHAyqlqXy5X2MJ+uEBpXnZ8=
 			</data>
 			<key>hash2</key>
 			<data>
-			GXG1V/qyQZhJhN/xymshtYtkyGK7kDntjY6hnG4hHrE=
+			qXlXqImRyYWWAFiWaM5y8R5W1303CQFBMcM7iMb19no=
 			</data>
 		</dict>
 		<key>Headers/NSDictionary+HRExtensions.h</key>
@@ -322,6 +356,17 @@
 			<key>hash2</key>
 			<data>
 			GiSDqmW5FTuAFGNyZyxbFnWzIMDJn8Ek2LgLI1e17/k=
+			</data>
+		</dict>
+		<key>Headers/NSString+HRExtensions.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ICjRPEdCOiSkKaSSTfXHq3ijTJM=
+			</data>
+			<key>hash2</key>
+			<data>
+			t2FG2JXBdB8Le17VHlsEZQr35xWh8VQ5UAACInq4FDY=
 			</data>
 		</dict>
 		<key>Headers/UIActionSheet+Blocks.h</key>

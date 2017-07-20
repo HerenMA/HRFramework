@@ -21,6 +21,7 @@
  */
 + (BOOL)isForceTouchAvailable:(UITraitCollection *)traitCollection;
 
+
 /**
  检测是否允许访问相机
 

@@ -15,18 +15,42 @@
 
 /**
  获取系统当前时间
+ 
+ @return <#return value description#>
+ */
++ (NSDate *)localDate;
+
+/**
+ 获取系统当前时间
 
  @return <#return value description#>
  */
 + (NSString *)localDateString;
 
 /**
- 转换成本地日期格式（中国标准）
+ 获取系统当前时间戳
 
- @param dateString <#dateString description#>
  @return <#return value description#>
  */
-+ (NSDate *)localDateFormat:(NSString *)dateString;
++ (NSString *)localTimeIntervalString;
+
+
+#pragma mark - 转换
+/**
+ 字符串转 NSDate
+
+ @param string 日期字符串
+ @return <#return value description#>
+ */
++ (NSDate *)stringConvert:(NSString *)string;
+
+/**
+ 时间戳转 NSDate
+
+ @param timeInterval 时间戳字符串
+ @return <#return value description#>
+ */
++ (NSDate *)timeIntervalConvert:(NSString *)timeInterval;
 
 
 #pragma mark - 微信日期

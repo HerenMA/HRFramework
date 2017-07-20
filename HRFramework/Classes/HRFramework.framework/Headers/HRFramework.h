@@ -31,6 +31,7 @@ FOUNDATION_EXPORT const unsigned char HRFrameworkVersionString[];
 #import <HRFramework/NSArray+HRExtensions.h>
 #import <HRFramework/NSDate+HRExtensions.h>
 #import <HRFramework/NSDictionary+HRExtensions.h>
+#import <HRFramework/NSString+HRExtensions.h>
 #import <HRFramework/UIButton+HRExtensions.h>
 #import <HRFramework/UIColor+HRExtensions.h>
 #import <HRFramework/UIImage+HRExtensions.h>
@@ -39,6 +40,7 @@ FOUNDATION_EXPORT const unsigned char HRFrameworkVersionString[];
 #import <HRFramework/HRImagePickerController.h>
 #import <HRFramework/HRLazyScrollView.h>
 #import <HRFramework/HRNavigationController.h>
+#import <HRFramework/HROutputView.h>
 #import <HRFramework/HRTabBarController.h>
 #import <HRFramework/HRTableView.h>
 #import <HRFramework/HRTextField.h>
@@ -52,3 +54,4 @@ FOUNDATION_EXPORT const unsigned char HRFrameworkVersionString[];
 #import <HRFramework/HRFileUtil.h>
 #import <HRFramework/HRSysAuthorityUtil.h>
 #import <HRFramework/HRUserDefaultsUtil.h>
+#import <HRFramework/HRValidateUtil.h>

@@ -28,6 +28,14 @@
 + (NSString *)localDateString;
 
 /**
+ 获取系统当前时间
+
+ @param format 日期格式
+ @return <#return value description#>
+ */
++ (NSString *)localDateStringFormat:(NSString *)format;
+
+/**
  获取系统当前时间戳
 
  @return <#return value description#>

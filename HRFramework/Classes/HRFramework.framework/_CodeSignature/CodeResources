@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/HRAlertViewStylePlainTextInput.h</key>
+		<data>
+		7oENAocAOoPkJYwXmjvFXpJgMNo=
+		</data>
 		<key>Headers/HRCache.h</key>
 		<data>
 		9XdT7evPBRsaT7iKyR4BSofpmws=
@@ -18,7 +22,7 @@
 		</data>
 		<key>Headers/HRFramework.h</key>
 		<data>
-		TblVeQ3Jcwi9H0KuYVq/aC0BX64=
+		FZTgHdGNeu1delVTYYRTfkZVX3Q=
 		</data>
 		<key>Headers/HRImagePickerController.h</key>
 		<data>
@@ -127,6 +131,17 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/HRAlertViewStylePlainTextInput.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			7oENAocAOoPkJYwXmjvFXpJgMNo=
+			</data>
+			<key>hash2</key>
+			<data>
+			Tk6DhtAj/s2dVuDeovbthQWSwsk1swWjMPsqFs4W+tg=
+			</data>
+		</dict>
 		<key>Headers/HRCache.h</key>
 		<dict>
 			<key>hash</key>
@@ -164,11 +179,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			TblVeQ3Jcwi9H0KuYVq/aC0BX64=
+			FZTgHdGNeu1delVTYYRTfkZVX3Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			XFt42jftd2YpDiPgq48+zBS1msmRS0HU2wuZAH2yIQ8=
+			EBiJjfLymEhoudV/Y97x/ZfmZ7J2eoee+M/KsgV/TkY=
 			</data>
 		</dict>
 		<key>Headers/HRImagePickerController.h</key>

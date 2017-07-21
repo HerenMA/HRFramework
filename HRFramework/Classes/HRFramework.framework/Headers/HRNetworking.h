@@ -48,6 +48,8 @@ typedef NS_ENUM(NSUInteger, HRRequestSerializer) {
     HRRequestSerializerJSON = 0,
     /** 设置请求数据为二进制格式*/
     HRRequestSerializerHTTP = 1,
+    /** 设置请求数据为Plain格式，限POST*/
+    HRRequestSerializerPlain = 2
 };
 
 /**
@@ -94,13 +96,6 @@ typedef void(^HRNetworkStatus)(HRNetworkStatusType status);
  关闭日志打印
  */
 - (void)closeLog;
-
-/**
- 设置 Content-Type
-
- @param contentType <#contentType description#>
- */
-- (void)setContentType:(NSString *)contentType;
 
 
 #pragma mark - 网络状态
@@ -177,52 +172,25 @@ typedef void(^HRNetworkStatus)(HRNetworkStatusType status);
 
  @param URLString 网址
  @param parameters 参数
- @param requestSerializer 请求数据格式
+ @param responseSerializer 响应数据格式
  @param success 成功回调
  @param failed 失败回调
  @return 返回的对象可取消请求,调用cancel方法
  */
-- (NSURLSessionDataTask *)GET:(NSString *)URLString parameters:(id)parameters requestSerializer:(HRRequestSerializer)requestSerializer success:(HRHttpRequestSuccess)success failed:(HRHttpRequestFailed)failed;
+- (NSURLSessionDataTask *)GET:(NSString *)URLString parameters:(id)parameters responseSerializer:(HRResponseSerializer)responseSerializer success:(HRHttpRequestSuccess)success failed:(HRHttpRequestFailed)failed;
 
 /**
  GET请求,自动缓存
 
  @param URLString 网址
  @param parameters 参数
- @param requestSerializer 请求数据格式
- @param cache 缓存回调
- @param success 成功回调
- @param failed 失败回调
- @return 返回的对象可取消请求,调用cancel方法
- */
-- (NSURLSessionDataTask *)GET:(NSString *)URLString parameters:(id)parameters requestSerializer:(HRRequestSerializer)requestSerializer cache:(HRHttpRequestCache)cache success:(HRHttpRequestSuccess)success failed:(HRHttpRequestFailed)failed;
-
-/**
- GET请求,无缓存
-
- @param URLString 网址
- @param parameters 参数
- @param requestSerializer 请求数据格式
- @param responseSerializer 响应数据格式
- @param success 成功回调
- @param failed 失败回调
- @return 返回的对象可取消请求,调用cancel方法
- */
-- (NSURLSessionDataTask *)GET:(NSString *)URLString parameters:(id)parameters requestSerializer:(HRRequestSerializer)requestSerializer responseSerializer:(HRResponseSerializer)responseSerializer success:(HRHttpRequestSuccess)success failed:(HRHttpRequestFailed)failed;
-
-/**
- GET请求,自动缓存
-
- @param URLString 网址
- @param parameters 参数
- @param requestSerializer 请求数据格式
  @param responseSerializer 响应数据格式
  @param cache 缓存回调
  @param success 成功回调
  @param failed 失败回调
  @return 返回的对象可取消请求,调用cancel方法
  */
-- (NSURLSessionDataTask *)GET:(NSString *)URLString parameters:(id)parameters requestSerializer:(HRRequestSerializer)requestSerializer responseSerializer:(HRResponseSerializer)responseSerializer cache:(HRHttpRequestCache)cache success:(HRHttpRequestSuccess)success failed:(HRHttpRequestFailed)failed;
+- (NSURLSessionDataTask *)GET:(NSString *)URLString parameters:(id)parameters responseSerializer:(HRResponseSerializer)responseSerializer cache:(HRHttpRequestCache)cache success:(HRHttpRequestSuccess)success failed:(HRHttpRequestFailed)failed;
 
 
 #pragma mark - POST请求

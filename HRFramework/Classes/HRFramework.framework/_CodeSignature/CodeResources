@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/HRFramework.h</key>
 		<data>
-		FZTgHdGNeu1delVTYYRTfkZVX3Q=
+		khI3IUVO2Xdo7LFNg9mNtpOOyCg=
 		</data>
 		<key>Headers/HRImagePickerController.h</key>
 		<data>
@@ -62,11 +62,11 @@
 		</data>
 		<key>Headers/HRTextField.h</key>
 		<data>
-		7FWHTZ8k+hYRUp8k61PbUbnLFio=
+		1VMGvSHiNri/Bz1hGYKQotqQPA0=
 		</data>
 		<key>Headers/HRTextView.h</key>
 		<data>
-		62pRe3LTotuZ2lLQj9Ny1Q/OSgA=
+		KhxmpnHZcrwc41mMAY5XsHYt4Uc=
 		</data>
 		<key>Headers/HRUserDefaultsUtil.h</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>Headers/NSString+HRExtensions.h</key>
 		<data>
-		ICjRPEdCOiSkKaSSTfXHq3ijTJM=
+		/JwrhXaKCWV5G6l2B9FCYY1Yyss=
 		</data>
 		<key>Headers/UIActionSheet+Blocks.h</key>
 		<data>
@@ -115,6 +115,10 @@
 		<key>Headers/UIImage+HRExtensions.h</key>
 		<data>
 		0nFaY8/D9t0vzQWMVg5DOYuB0cU=
+		</data>
+		<key>Headers/UILabel+HRExtensions.h</key>
+		<data>
+		h/Luymsz9cB26JY7Ld9PnIvn+dc=
 		</data>
 		<key>Headers/UIPickerView+Blocks.h</key>
 		<data>
@@ -179,11 +183,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			FZTgHdGNeu1delVTYYRTfkZVX3Q=
+			khI3IUVO2Xdo7LFNg9mNtpOOyCg=
 			</data>
 			<key>hash2</key>
 			<data>
-			EBiJjfLymEhoudV/Y97x/ZfmZ7J2eoee+M/KsgV/TkY=
+			RSK4hqy17PVa3U7RqWV12mrF+svU9GO6onTOkdBWeMU=
 			</data>
 		</dict>
 		<key>Headers/HRImagePickerController.h</key>
@@ -289,22 +293,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7FWHTZ8k+hYRUp8k61PbUbnLFio=
+			1VMGvSHiNri/Bz1hGYKQotqQPA0=
 			</data>
 			<key>hash2</key>
 			<data>
-			k507qahRaHFNFTXTTouwClxGneshthT41GtPwL1Wz6c=
+			gIde8DC+gJ77Q9BzKx2uRytWFUdZxpTU/ACN8NSDg5I=
 			</data>
 		</dict>
 		<key>Headers/HRTextView.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			62pRe3LTotuZ2lLQj9Ny1Q/OSgA=
+			KhxmpnHZcrwc41mMAY5XsHYt4Uc=
 			</data>
 			<key>hash2</key>
 			<data>
-			zpqwlZbBEsL6vDst/Fd/95BQNbgy6M8uE1vTtnL9lGU=
+			rvo2uZZmLdJneC8I9eKIlOoUmnpsliakYEgdO+/uLVY=
 			</data>
 		</dict>
 		<key>Headers/HRUserDefaultsUtil.h</key>
@@ -377,11 +381,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ICjRPEdCOiSkKaSSTfXHq3ijTJM=
+			/JwrhXaKCWV5G6l2B9FCYY1Yyss=
 			</data>
 			<key>hash2</key>
 			<data>
-			t2FG2JXBdB8Le17VHlsEZQr35xWh8VQ5UAACInq4FDY=
+			1YW2v0XiLtya9WrWJ3yqReNIigHhsj9xtnp16cQMCW0=
 			</data>
 		</dict>
 		<key>Headers/UIActionSheet+Blocks.h</key>
@@ -437,6 +441,17 @@
 			<key>hash2</key>
 			<data>
 			d0VoDbPE2IoAX+1PBoYqgcUmmGA9MO8qVVmSR+Fi+/c=
+			</data>
+		</dict>
+		<key>Headers/UILabel+HRExtensions.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			h/Luymsz9cB26JY7Ld9PnIvn+dc=
+			</data>
+			<key>hash2</key>
+			<data>
+			jZGALGrkn16a8YUOjTmFiumICu9xJPuyCMR66Zzho3E=
 			</data>
 		</dict>
 		<key>Headers/UIPickerView+Blocks.h</key>

@@ -42,7 +42,7 @@ typedef NS_ENUM(NSInteger, LimitType) {
 @property (assign, nonatomic) NSInteger canEnterWordsNumber;
 /// 委托
 @property (weak, nonatomic) id<HRTextFieldDelegate> returnDelegate;
-/// Placeholder 字体颜色
+/// 占位符字体颜色
 @property (strong, nonatomic) UIColor *placeholderColor;
 /// 内边距
 @property (assign, nonatomic) UIEdgeInsets insets;

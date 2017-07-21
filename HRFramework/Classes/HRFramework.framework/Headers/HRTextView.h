@@ -31,13 +31,18 @@ typedef NS_ENUM(NSInteger, LimitTextType) {
  */
 @interface HRTextView : UITextView
 
-///  能够输入的最大字符串长度
+/// 占位符
+@property (strong, nonatomic) NSString *placeholder;
+/// 占位符字体颜色
+@property (strong, nonatomic) UIColor *placeholderColor;
+
+/// 能够输入的最大字符串长度
 @property (assign, nonatomic) NSInteger maxWordNumber;
 /// 长度限制样式, default is 0
 @property (assign, nonatomic) LimitTextType limiType;
 /// 是否筛除emoji表情, default is NO
 @property (assign, nonatomic) BOOL isEmoticons;
-// 输入内容的起始坐标, default is (8,8)
+/// 输入内容的起始坐标, default is (8,8)
 @property (assign, nonatomic) CGPoint textPoint;
 /// 可输入字数
 @property (assign, nonatomic) NSInteger canEnterWordsNumber;

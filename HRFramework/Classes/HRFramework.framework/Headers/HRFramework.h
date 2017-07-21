@@ -35,6 +35,7 @@ FOUNDATION_EXPORT const unsigned char HRFrameworkVersionString[];
 #import <HRFramework/UIButton+HRExtensions.h>
 #import <HRFramework/UIColor+HRExtensions.h>
 #import <HRFramework/UIImage+HRExtensions.h>
+#import <HRFramework/UILabel+HRExtensions.h>
 
 #import <HRFramework/HRAlertViewStylePlainTextInput.h>
 #import <HRFramework/HRCycleScrollView.h>

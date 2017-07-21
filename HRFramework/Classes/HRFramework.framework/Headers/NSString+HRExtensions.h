@@ -11,10 +11,31 @@
 @interface NSString (HRExtensions)
 
 /**
+ 新字符串
+ 
+ @return <#return value description#>
+ */
++ (NSString *)uuid;
+
+/**
  字符串是否为空
 
  @return <#return value description#>
  */
 - (BOOL)isEmpty;
+
+/**
+ 获取首字大写拼音
+
+ @return <#return value description#>
+ */
+- (NSString *)firstCharactor;
+
+/**
+ 获取全拼
+
+ @return <#return value description#>
+ */
+- (NSString *)allCharactor;
 
 @end

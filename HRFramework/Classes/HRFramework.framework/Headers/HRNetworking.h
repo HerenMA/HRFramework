@@ -95,6 +95,13 @@ typedef void(^HRNetworkStatus)(HRNetworkStatusType status);
  */
 - (void)closeLog;
 
+/**
+ 设置 Content-Type
+
+ @param contentType <#contentType description#>
+ */
+- (void)setContentType:(NSString *)contentType;
+
 
 #pragma mark - 网络状态
 /**

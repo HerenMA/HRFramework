@@ -31,7 +31,7 @@ typedef NS_ENUM(NSInteger, LimitType) {
 @interface HRTextField : UITextField
 
 /// 能够输入的最大字符串长度
-@property (assign, nonatomic) NSInteger maxWordNumber;
+@property (assign, nonatomic) NSUInteger maxWordNumber;
 /// 长度限制样式, default is InterceptionString
 @property (assign, nonatomic) LimitType limiType;
 /// 是否筛除emoji表情, default is NO

@@ -46,7 +46,7 @@
  @param hexString CSS 颜色值
  @return <#return value description#>
  */
-+ (UIColor *)colorWithHexString:(NSString *)hexString;
++ (UIColor *)colorWithHexStr:(NSString *)hexString;
 
 
 #pragma mark - 属性

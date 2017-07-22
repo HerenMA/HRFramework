@@ -15,13 +15,6 @@
 
 /**
  获取系统当前时间
- 
- @return <#return value description#>
- */
-+ (NSDate *)localDate;
-
-/**
- 获取系统当前时间
 
  @return <#return value description#>
  */

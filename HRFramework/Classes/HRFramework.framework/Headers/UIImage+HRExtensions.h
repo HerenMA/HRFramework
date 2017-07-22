@@ -174,14 +174,14 @@
 - (UIImage *)tintedImageWithColor:(UIColor *)color insets:(UIEdgeInsets)insets level:(CGFloat)level;
 
 
-#pragma mark - 颜色生成图片
+#pragma mark - 二维码
 /**
- 创建指定颜色图片
- 
- @param color 颜色
- @param size 图片大小
+ 创建指定大小二维码
+
+ @param string 二维码字符忠
+ @param size 二维码大小
  @return <#return value description#>
  */
-+ (UIImage *)createImageWithColor:(UIColor *)color size:(CGSize)size;
++ (UIImage *)createQRCodeWithString:(NSString *)string size:(CGSize)size;
 
 @end

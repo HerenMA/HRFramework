@@ -11,13 +11,6 @@
 @interface NSString (HRExtensions)
 
 /**
- 新字符串
- 
- @return <#return value description#>
- */
-+ (NSString *)uuid;
-
-/**
  字符串是否为空
 
  @return <#return value description#>
@@ -37,5 +30,20 @@
  @return <#return value description#>
  */
 - (NSString *)allCharactor;
+
+/**
+ URL字符串参数转换成字典
+ 
+ @return <#return value description#>
+ */
+- (NSDictionary *)convertToDictionary;
+
+/**
+ 获取URL指定参数值
+
+ @param key 参数Key
+ @return <#return value description#>
+ */
+- (NSString *)getURLParamsWithKey:(NSString *)key;
 
 @end

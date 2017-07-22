@@ -86,7 +86,7 @@
 		</data>
 		<key>Headers/NSDate+HRExtensions.h</key>
 		<data>
-		62nDKgEghFdgWM1DpTfpY/IWXLU=
+		U6+tONs/2kYNuTjjmGqg3Cqp/oY=
 		</data>
 		<key>Headers/NSDictionary+HRExtensions.h</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>Headers/NSString+HRExtensions.h</key>
 		<data>
-		yvlhaklxcXDABk46q+eVSOSFHPE=
+		5GuLHfjM4+Vkhd492gxU1oKRkTU=
 		</data>
 		<key>Headers/UIActionSheet+Blocks.h</key>
 		<data>
@@ -110,11 +110,11 @@
 		</data>
 		<key>Headers/UIColor+HRExtensions.h</key>
 		<data>
-		r7kVgHr/cTNOpwodiXf+pt0TJ/s=
+		yuoAfVRMdG8inWFaO5qiuCjBCz8=
 		</data>
 		<key>Headers/UIImage+HRExtensions.h</key>
 		<data>
-		GSaDeOCAXGi1MoDGrE1n7lgEreM=
+		UZxlHS80F5MqOpDZDc7oY0E4rMw=
 		</data>
 		<key>Headers/UILabel+HRExtensions.h</key>
 		<data>
@@ -359,11 +359,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			62nDKgEghFdgWM1DpTfpY/IWXLU=
+			U6+tONs/2kYNuTjjmGqg3Cqp/oY=
 			</data>
 			<key>hash2</key>
 			<data>
-			XFXaOwf9yyzVIzHtcYnzqtbikuuICp1ryeJ7xEYAHEE=
+			FhpUwlfuQvtkezvpMfN9hDqk7xN0fASeu0hB3Ob8CL4=
 			</data>
 		</dict>
 		<key>Headers/NSDictionary+HRExtensions.h</key>
@@ -381,11 +381,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			yvlhaklxcXDABk46q+eVSOSFHPE=
+			5GuLHfjM4+Vkhd492gxU1oKRkTU=
 			</data>
 			<key>hash2</key>
 			<data>
-			1LACBGgdyyj/ZFmlaFkTYJT4nASO0cDi+hCtm/NDFfk=
+			oUre0aVpOE6xUXPF7OsQHlP2n3og6pkd4C7Jnv8fwbg=
 			</data>
 		</dict>
 		<key>Headers/UIActionSheet+Blocks.h</key>
@@ -425,22 +425,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			r7kVgHr/cTNOpwodiXf+pt0TJ/s=
+			yuoAfVRMdG8inWFaO5qiuCjBCz8=
 			</data>
 			<key>hash2</key>
 			<data>
-			U0ochcxrSJEjkU1X+hNHNrZFCkVgi378T4c+yLRDCuI=
+			muKJhdu9aIxMmXuHim9PKC945aCeygYpQDTB1rxIfQg=
 			</data>
 		</dict>
 		<key>Headers/UIImage+HRExtensions.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			GSaDeOCAXGi1MoDGrE1n7lgEreM=
+			UZxlHS80F5MqOpDZDc7oY0E4rMw=
 			</data>
 			<key>hash2</key>
 			<data>
-			+G6QDQcTns+sEY0QprENudUmucoTPCQcBaehROyY7bM=
+			4u49OQU8ecBfhumqdz5QLGKX8eqhrzy4dUDJxgpII48=
 			</data>
 		</dict>
 		<key>Headers/UILabel+HRExtensions.h</key>

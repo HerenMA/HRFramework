@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 typedef void (^HRAlertViewStylePlainTextInputConfirmBlock)(NSString *text);
-typedef void (^HRAlertViewStylePlainTextInputCancelBlock)();
+typedef void (^HRAlertViewStylePlainTextInputCancelBlock)(void);
 
 
 /**

@@ -21,7 +21,7 @@
 
 @end
 
-typedef void(^dismissWithOperation)();
+typedef void(^dismissWithOperation)(void);
 
 typedef NS_ENUM(NSUInteger, HROutputViewDirection) {
     /** 尖尖左 */

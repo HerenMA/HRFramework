@@ -23,6 +23,26 @@ FOUNDATION_EXPORT const unsigned char HRFrameworkVersionString[];
     #define DMLog(...) do { } while (0)
 #endif
 
+// UIScreen width.
+#define HR_ScreenWidth   [UIScreen mainScreen].bounds.size.width
+// UIScreen height.
+#define HR_ScreenHeight  [UIScreen mainScreen].bounds.size.height
+
+/// iPhone X
+#define HR_iPhoneX (HR_ScreenWidth == 375.f && HR_ScreenHeight == 812.f ? YES : NO)
+/// Status bar height.
+#define HR_StatusBarHeight (HR_iPhoneX ? 44.f : 20.f)
+/// Navigation bar height.
+#define HR_NavigationBarHeight 44.f
+/// Tabbar height.
+#define HR_TabbarHeight (HR_iPhoneX ? (49.f + 34.f) : 49.f)
+/// Tabbar safe bottom margin.
+#define HR_TabbarSafeBottomMargin (HR_iPhoneX ? 34.f : 0.f)
+/// Status bar & navigation bar height.
+#define HR_StatusBarAndNavigationBarHeight (HR_iPhoneX ? 88.f : 64.f)
+/// View safeAreaInsets
+#define HR_ViewSafeAreInsets(view) ({ UIEdgeInsets insets; if(@available(iOS 11.0, *)) { insets = view.safeAreaInsets; } else { insets = UIEdgeInsetsZero; } insets; })
+
 
 #import <HRFramework/UIActionSheet+Blocks.h>
 #import <HRFramework/UIAlertView+Blocks.h>
@@ -57,3 +77,4 @@ FOUNDATION_EXPORT const unsigned char HRFrameworkVersionString[];
 #import <HRFramework/HRSysAuthorityUtil.h>
 #import <HRFramework/HRUserDefaultsUtil.h>
 #import <HRFramework/HRValidateUtil.h>
+

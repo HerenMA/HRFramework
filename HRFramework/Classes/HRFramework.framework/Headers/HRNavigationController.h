@@ -21,11 +21,18 @@
 @property (strong, nonatomic) UIColor *titleColor;
 /// 着色颜色
 @property (strong, nonatomic) UIColor *tintColor;
+/// 返回按钮标题
+@property (strong, nonatomic) NSString *backTitle;
 /// 返回按钮图片
 @property (strong, nonatomic) UIImage *backImage;
 /// 隐藏分隔线
 @property (assign, nonatomic) BOOL hideSeparator;
 /// 分隔线颜色
 @property (strong, nonatomic) UIColor *separatorColor;
+
+/// 设备方向
+@property (assign, nonatomic) UIInterfaceOrientation interfaceOrientation;
+/// 屏幕旋转方向
+@property (assign, nonatomic) UIInterfaceOrientationMask interfaceOrientationMask;
 
 @end

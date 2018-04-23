@@ -144,6 +144,14 @@
  */
 - (UIImage *)darkenWithLevel:(CGFloat)level insets:(UIEdgeInsets)insets;
 
+/**
+ 透明度
+
+ @param alpha 0.0 ≤ level ≤ 1.0
+ @return <#return value description#>
+ */
+- (UIImage *)transparentWithAlpha:(CGFloat)alpha;
+
 
 #pragma mark - 染色
 /**

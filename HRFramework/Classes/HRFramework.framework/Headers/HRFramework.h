@@ -24,12 +24,12 @@ FOUNDATION_EXPORT const unsigned char HRFrameworkVersionString[];
 #endif
 
 // UIScreen width.
-#define HR_ScreenWidth   [UIScreen mainScreen].bounds.size.width
+#define HR_ScreenWidth [UIScreen mainScreen].bounds.size.width
 // UIScreen height.
-#define HR_ScreenHeight  [UIScreen mainScreen].bounds.size.height
+#define HR_ScreenHeight [UIScreen mainScreen].bounds.size.height
 
 /// iPhone X
-#define HR_iPhoneX (HR_ScreenWidth == 375.f && HR_ScreenHeight == 812.f ? YES : NO)
+#define HR_iPhoneX ((HR_ScreenWidth == 375.f && HR_ScreenHeight == 812.f) || (HR_ScreenWidth == 812.f && HR_ScreenHeight == 375.f) ? YES : NO)
 /// Status bar height.
 #define HR_StatusBarHeight (HR_iPhoneX ? 44.f : 20.f)
 /// Navigation bar height.
@@ -56,10 +56,12 @@ FOUNDATION_EXPORT const unsigned char HRFrameworkVersionString[];
 #import <HRFramework/UIColor+HRExtensions.h>
 #import <HRFramework/UIImage+HRExtensions.h>
 #import <HRFramework/UILabel+HRExtensions.h>
+#import <HRFramework/UITextField+HRExtensions.h>
 
 #import <HRFramework/HRAlertViewStylePlainTextInput.h>
 #import <HRFramework/HRCycleScrollView.h>
 #import <HRFramework/HRImagePickerController.h>
+#import <HRFramework/HRLabel.h>
 #import <HRFramework/HRLazyScrollView.h>
 #import <HRFramework/HRNavigationController.h>
 #import <HRFramework/HROutputView.h>
@@ -74,6 +76,7 @@ FOUNDATION_EXPORT const unsigned char HRFrameworkVersionString[];
 #import <HRFramework/HRSkinManager.h>
 
 #import <HRFramework/HRFileUtil.h>
+#import <HRFramework/HRIdentityCardUtil.h>
 #import <HRFramework/HRSysAuthorityUtil.h>
 #import <HRFramework/HRUserDefaultsUtil.h>
 #import <HRFramework/HRValidateUtil.h>

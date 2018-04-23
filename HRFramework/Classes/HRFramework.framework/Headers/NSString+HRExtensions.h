@@ -46,4 +46,25 @@
  */
 - (NSString *)getURLParamsWithKey:(NSString *)key;
 
+/**
+ URL参数编码
+
+ @return <#return value description#>
+ */
+- (NSString *)escapeURLParams;
+
+/**
+ URL编码
+ 
+ @return <#return value description#>
+ */
+- (NSString *)escapes;
+
+/**
+ URL解码
+ 
+ @return <#return value description#>
+ */
+- (NSString *)unEscapes;
+
 @end

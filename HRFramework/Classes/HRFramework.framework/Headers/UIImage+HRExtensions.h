@@ -192,4 +192,21 @@
  */
 + (UIImage *)createQRCodeWithString:(NSString *)string size:(CGSize)size;
 
+
+#pragma mark - Base64
+/**
+ 转换成 Base64 字符串
+
+ @return <#return value description#>
+ */
+- (NSString *)base64EncodedString;
+
+/**
+ 转换成 Base64 字符串
+
+ @param compressionQuality 压缩比例 is 0(most)..1(least)
+ @return <#return value description#>
+ */
+- (NSString *)base64EncodedStringWidthCompressionQuality:(CGFloat)compressionQuality;
+
 @end

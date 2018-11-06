@@ -88,6 +88,11 @@ typedef void(^HRNetworkStatus)(HRNetworkStatusType status);
 
 #pragma mark - 配置
 /**
+ 网络请求超时时间
+ */
+@property (assign, nonatomic) NSTimeInterval timeoutInterval;
+
+/**
  开启日志打印 (Debug级别)
  */
 - (void)openLog;

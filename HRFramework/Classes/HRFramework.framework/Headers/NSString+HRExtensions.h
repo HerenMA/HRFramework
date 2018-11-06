@@ -6,7 +6,7 @@
 //  Copyright © 2017年 浙江和仁科技股份有限公司. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface NSString (HRExtensions)
 
@@ -66,5 +66,12 @@
  @return <#return value description#>
  */
 - (NSString *)unEscapes;
+
+/**
+ Base64 字符串还原成 UIImage
+
+ @return <#return value description#>
+ */
+- (UIImage *)convertToImage;
 
 @end

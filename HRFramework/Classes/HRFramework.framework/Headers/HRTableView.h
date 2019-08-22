@@ -11,7 +11,7 @@
 /**
  表格
  */
-@interface HRTableView : UITableView
+@interface HRTableView : UITableView <UIGestureRecognizerDelegate>
 
 /// 点击空白处隐藏键盘？
 @property (assign, nonatomic) BOOL clickBlankSpaceHiddenKeyword;

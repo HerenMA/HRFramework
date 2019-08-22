@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ NSString 分类
+ */
 @interface NSString (HRExtensions)
 
 /**
@@ -47,25 +50,55 @@
 - (NSString *)getURLParamsWithKey:(NSString *)key;
 
 /**
- URL参数编码
+ URL参数 escape 编码
 
  @return <#return value description#>
  */
 - (NSString *)escapeURLParams;
 
 /**
- URL编码
+ 对除ASCII字母、数字、标点符号 @  *  _  +  -  .  / 以外的其他字符进行编码
  
  @return <#return value description#>
  */
-- (NSString *)escapes;
+- (NSString *)escape;
 
 /**
- URL解码
+ escape 解码
  
  @return <#return value description#>
  */
-- (NSString *)unEscapes;
+- (NSString *)unescape;
+
+/**
+ 对URL的组成部分进行个别编码，而不用于对整个URL进行编码
+
+ @return <#return value description#>
+ */
+- (NSString *)encodeURIComponent;
+
+/**
+ encodeURIComponent 解码
+ 
+ @return <#return value description#>
+ */
+- (NSString *)decodeURIComponent;
+
+/**
+ DES 加密
+ 
+ @param key 密钥
+ @return <#return value description#>
+ */
+- (NSString *)encodeDesWithKey:(NSString *)key;
+
+/**
+ DES 解密
+ 
+ @param key 密钥
+ @return <#return value description#>
+ */
+- (NSString *)decodeDesWithKey:(NSString *)key;
 
 /**
  Base64 字符串还原成 UIImage

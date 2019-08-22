@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ UITextField 分类
+ */
 @interface UITextField (HRExtensions)
 
 /// 能够输入的最大字符串长度

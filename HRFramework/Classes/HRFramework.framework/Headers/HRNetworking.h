@@ -24,7 +24,6 @@
     #define kIsWiFiNetwork [[HRNetworking sharedNetworking] isWiFiNetwork]
 #endif
 
-
 #pragma mark - 枚举
 /**
  网络状态
@@ -48,7 +47,7 @@ typedef NS_ENUM(NSUInteger, HRRequestSerializer) {
     HRRequestSerializerJSON = 0,
     /** 设置请求数据为二进制格式*/
     HRRequestSerializerHTTP = 1,
-    /** 设置请求数据为Plain格式，限POST*/
+    /** 设置请求数据为Plain格式，无进度回调且限POST*/
     HRRequestSerializerPlain = 2
 };
 
@@ -62,16 +61,19 @@ typedef NS_ENUM(NSUInteger, HRResponseSerializer) {
     HRResponseSerializerHTTP = 1,
 };
 
-
 #pragma mark - Block
 /** 缓存的Block */
-typedef void(^HRHttpRequestCache)(id responseCache);
+typedef void (^HRHttpRequestCache)(id responseCache);
 /** 请求成功的Block */
-typedef void(^HRHttpRequestSuccess)(id responseObject);
+typedef void (^HRHttpRequestSuccess)(id responseObject);
 /** 请求失败的Block */
-typedef void(^HRHttpRequestFailed)(NSInteger errorCode, NSString *errorDescription);
+typedef void (^HRHttpRequestFailed)(NSInteger errorCode, NSString *errorDescription);
+/** 请求进度的Block */
+typedef void (^HRHttpRequestProgress)(NSUInteger fractionCompleted);
+/** 下载完成的Block */
+typedef void (^HRHttpDownloadSuccess)(NSString *filePath);
 /** 网络状态的Block*/
-typedef void(^HRNetworkStatus)(HRNetworkStatusType status);
+typedef void (^HRNetworkStatus)(HRNetworkStatusType status);
 
 /**
  网络请求
@@ -84,7 +86,6 @@ typedef void(^HRNetworkStatus)(HRNetworkStatusType status);
  @return <#return value description#>
  */
 + (instancetype)sharedNetworking;
-
 
 #pragma mark - 配置
 /**
@@ -101,7 +102,6 @@ typedef void(^HRNetworkStatus)(HRNetworkStatusType status);
  关闭日志打印
  */
 - (void)closeLog;
-
 
 #pragma mark - 网络状态
 /**
@@ -132,7 +132,6 @@ typedef void(^HRNetworkStatus)(HRNetworkStatusType status);
  */
 - (void)networkStatusWithBlock:(HRNetworkStatus)networkStatus;
 
-
 #pragma mark - 请求头
 /**
  添加请求头
@@ -141,16 +140,38 @@ typedef void(^HRNetworkStatus)(HRNetworkStatusType status);
  @param value <#value description#>
  */
 - (void)addHTTPHeaderWithField:(NSString *)field value:(NSString *)value;
-    
+
 /**
  移除请求头
  */
 - (void)removeHTTPHeader;
 
+#pragma mark - Download请求
+/**
+ Download请求
+ 
+ @param URLString 网址
+ @param filePath 保存路径
+ @param progress 进度回调
+ @param success 成功回调
+ @param failed 失败回调
+ @return 返回的对象可取消请求,调用cancel方法
+ */
+- (NSURLSessionDownloadTask *)Download:(NSString *)URLString filePath:(NSString *)filePath progress:(HRHttpRequestProgress)progress success:(HRHttpDownloadSuccess)success failed:(HRHttpRequestFailed)failed;
 
 #pragma mark - GET请求
 /**
- GET请求,无缓存
+ GET请求
+ 
+ @param URLString 网址
+ @param success 成功回调
+ @param failed 失败回调
+ @return 返回的对象可取消请求,调用cancel方法
+ */
+- (NSURLSessionDataTask *)GET:(NSString *)URLString success:(HRHttpRequestSuccess)success failed:(HRHttpRequestFailed)failed;
+
+/**
+ GET请求
 
  @param URLString 网址
  @param parameters 参数
@@ -161,44 +182,29 @@ typedef void(^HRNetworkStatus)(HRNetworkStatusType status);
 - (NSURLSessionDataTask *)GET:(NSString *)URLString parameters:(id)parameters success:(HRHttpRequestSuccess)success failed:(HRHttpRequestFailed)failed;
 
 /**
- GET请求,自动缓存
-
+ GET请求
+ 
  @param URLString 网址
- @param parameters 参数
- @param cache 缓存回调
+ @param progress 进度回调
  @param success 成功回调
  @param failed 失败回调
  @return 返回的对象可取消请求,调用cancel方法
  */
-- (NSURLSessionDataTask *)GET:(NSString *)URLString parameters:(id)parameters cache:(HRHttpRequestCache)cache success:(HRHttpRequestSuccess)success failed:(HRHttpRequestFailed)failed;
+- (NSURLSessionDataTask *)GET:(NSString *)URLString progress:(HRHttpRequestProgress)progress success:(HRHttpRequestSuccess)success failed:(HRHttpRequestFailed)failed;
 
 /**
- GET请求,无缓存
+ GET请求
 
  @param URLString 网址
  @param parameters 参数
- @param responseSerializer 响应数据格式
+ @param progress 进度回调
  @param success 成功回调
  @param failed 失败回调
  @return 返回的对象可取消请求,调用cancel方法
  */
-- (NSURLSessionDataTask *)GET:(NSString *)URLString parameters:(id)parameters responseSerializer:(HRResponseSerializer)responseSerializer success:(HRHttpRequestSuccess)success failed:(HRHttpRequestFailed)failed;
+- (NSURLSessionDataTask *)GET:(NSString *)URLString parameters:(id)parameters progress:(HRHttpRequestProgress)progress success:(HRHttpRequestSuccess)success failed:(HRHttpRequestFailed)failed;
 
-/**
- GET请求,自动缓存
-
- @param URLString 网址
- @param parameters 参数
- @param responseSerializer 响应数据格式
- @param cache 缓存回调
- @param success 成功回调
- @param failed 失败回调
- @return 返回的对象可取消请求,调用cancel方法
- */
-- (NSURLSessionDataTask *)GET:(NSString *)URLString parameters:(id)parameters responseSerializer:(HRResponseSerializer)responseSerializer cache:(HRHttpRequestCache)cache success:(HRHttpRequestSuccess)success failed:(HRHttpRequestFailed)failed;
-
-
-#pragma mark - POST请求
+#pragma mark - POST请求,无缓存
 /**
  POST请求,无缓存
 
@@ -211,16 +217,16 @@ typedef void(^HRNetworkStatus)(HRNetworkStatusType status);
 - (NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(id)parameters success:(HRHttpRequestSuccess)success failed:(HRHttpRequestFailed)failed;
 
 /**
- POST请求,自动缓存
-
+ POST请求,无缓存
+ 
  @param URLString 网址
  @param parameters 参数
- @param cache 缓存回调
+ @param progress 进度回调
  @param success 成功回调
  @param failed 失败回调
  @return 返回的对象可取消请求,调用cancel方法
  */
-- (NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(id)parameters cache:(HRHttpRequestCache)cache success:(HRHttpRequestSuccess)success failed:(HRHttpRequestFailed)failed;
+- (NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(id)parameters progress:(HRHttpRequestProgress)progress success:(HRHttpRequestSuccess)success failed:(HRHttpRequestFailed)failed;
 
 /**
  POST请求,无缓存
@@ -235,17 +241,17 @@ typedef void(^HRNetworkStatus)(HRNetworkStatusType status);
 - (NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(id)parameters requestSerializer:(HRRequestSerializer)requestSerializer success:(HRHttpRequestSuccess)success failed:(HRHttpRequestFailed)failed;
 
 /**
- POST请求,自动缓存
- 
+ POST请求,无缓存
+
  @param URLString 网址
  @param parameters 参数
  @param requestSerializer 请求数据格式
- @param cache 缓存回调
+ @param progress 进度回调
  @param success 成功回调
  @param failed 失败回调
  @return 返回的对象可取消请求,调用cancel方法
  */
-- (NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(id)parameters requestSerializer:(HRRequestSerializer)requestSerializer cache:(HRHttpRequestCache)cache success:(HRHttpRequestSuccess)success failed:(HRHttpRequestFailed)failed;
+- (NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(id)parameters requestSerializer:(HRRequestSerializer)requestSerializer progress:(HRHttpRequestProgress)progress success:(HRHttpRequestSuccess)success failed:(HRHttpRequestFailed)failed;
 
 /**
  POST请求,无缓存
@@ -261,6 +267,73 @@ typedef void(^HRNetworkStatus)(HRNetworkStatusType status);
 - (NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(id)parameters requestSerializer:(HRRequestSerializer)requestSerializer responseSerializer:(HRResponseSerializer)responseSerializer success:(HRHttpRequestSuccess)success failed:(HRHttpRequestFailed)failed;
 
 /**
+ POST请求,无缓存
+ 
+ @param URLString 网址
+ @param parameters 参数
+ @param requestSerializer 请求数据格式
+ @param responseSerializer 响应数据格式
+ @param progress 进度回调
+ @param success 成功回调
+ @param failed 失败回调
+ @return 返回的对象可取消请求,调用cancel方法
+ */
+- (NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(id)parameters requestSerializer:(HRRequestSerializer)requestSerializer responseSerializer:(HRResponseSerializer)responseSerializer progress:(HRHttpRequestProgress)progress success:(HRHttpRequestSuccess)success failed:(HRHttpRequestFailed)failed;
+
+#pragma mark - POST请求,自动缓存
+/**
+ POST请求,自动缓存
+ 
+ @param URLString 网址
+ @param parameters 参数
+ @param cache 缓存回调
+ @param success 成功回调
+ @param failed 失败回调
+ @return 返回的对象可取消请求,调用cancel方法
+ */
+- (NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(id)parameters cache:(HRHttpRequestCache)cache success:(HRHttpRequestSuccess)success failed:(HRHttpRequestFailed)failed;
+
+/**
+ POST请求,自动缓存
+ 
+ @param URLString 网址
+ @param parameters 参数
+ @param cache 缓存回调
+ @param progress 进度回调
+ @param success 成功回调
+ @param failed 失败回调
+ @return 返回的对象可取消请求,调用cancel方法
+ */
+- (NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(id)parameters cache:(HRHttpRequestCache)cache progress:(HRHttpRequestProgress)progress success:(HRHttpRequestSuccess)success failed:(HRHttpRequestFailed)failed;
+
+/**
+ POST请求,自动缓存
+ 
+ @param URLString 网址
+ @param parameters 参数
+ @param requestSerializer 请求数据格式
+ @param cache 缓存回调
+ @param success 成功回调
+ @param failed 失败回调
+ @return 返回的对象可取消请求,调用cancel方法
+ */
+- (NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(id)parameters requestSerializer:(HRRequestSerializer)requestSerializer cache:(HRHttpRequestCache)cache success:(HRHttpRequestSuccess)success failed:(HRHttpRequestFailed)failed;
+
+/**
+ POST请求,自动缓存
+ 
+ @param URLString 网址
+ @param parameters 参数
+ @param requestSerializer 请求数据格式
+ @param cache 缓存回调
+ @param progress 进度回调
+ @param success 成功回调
+ @param failed 失败回调
+ @return 返回的对象可取消请求,调用cancel方法
+ */
+- (NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(id)parameters requestSerializer:(HRRequestSerializer)requestSerializer cache:(HRHttpRequestCache)cache progress:(HRHttpRequestProgress)progress success:(HRHttpRequestSuccess)success failed:(HRHttpRequestFailed)failed;
+
+/**
  POST请求,自动缓存
  
  @param URLString 网址
@@ -273,5 +346,20 @@ typedef void(^HRNetworkStatus)(HRNetworkStatusType status);
  @return 返回的对象可取消请求,调用cancel方法
  */
 - (NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(id)parameters requestSerializer:(HRRequestSerializer)requestSerializer responseSerializer:(HRResponseSerializer)responseSerializer cache:(HRHttpRequestCache)cache success:(HRHttpRequestSuccess)success failed:(HRHttpRequestFailed)failed;
+
+/**
+ POST请求,自动缓存
+ 
+ @param URLString 网址
+ @param parameters 参数
+ @param requestSerializer 请求数据格式
+ @param responseSerializer 响应数据格式
+ @param cache 缓存回调
+ @param progress 进度回调
+ @param success 成功回调
+ @param failed 失败回调
+ @return 返回的对象可取消请求,调用cancel方法
+ */
+- (NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(id)parameters requestSerializer:(HRRequestSerializer)requestSerializer responseSerializer:(HRResponseSerializer)responseSerializer cache:(HRHttpRequestCache)cache progress:(HRHttpRequestProgress)progress success:(HRHttpRequestSuccess)success failed:(HRHttpRequestFailed)failed;
 
 @end

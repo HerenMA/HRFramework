@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ NSURLRequest 分类
+ */
 @interface NSURLRequest (HRExtensions)
 
 @end

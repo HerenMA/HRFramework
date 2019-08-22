@@ -90,7 +90,6 @@
  */
 + (UIImage *)imageWithBundle:(NSString *)bundleName imagePathAndName:(NSString *)imagePathAndName resizable:(BOOL)resizable disabledCache:(BOOL)disabledCache;
 
-
 #pragma mark - 缩放
 /**
  等比例缩放
@@ -107,7 +106,6 @@
  @return <#return value description#>
  */
 - (NSData *)compressedWithQuality:(CGFloat)compressionQuality;
-
 
 #pragma mark - 亮度
 /**
@@ -152,7 +150,6 @@
  */
 - (UIImage *)transparentWithAlpha:(CGFloat)alpha;
 
-
 #pragma mark - 染色
 /**
  染色
@@ -181,7 +178,6 @@
  */
 - (UIImage *)tintedImageWithColor:(UIColor *)color insets:(UIEdgeInsets)insets level:(CGFloat)level;
 
-
 #pragma mark - 二维码
 /**
  创建指定大小二维码
@@ -191,6 +187,22 @@
  @return <#return value description#>
  */
 + (UIImage *)createQRCodeWithString:(NSString *)string size:(CGSize)size;
+
+
+#pragma mark - 截图
+/**
+ 屏幕截图
+
+ @return <#return value description#>
+ */
++ (NSData *)screenshotInDataFormat;
+
+/**
+ 屏幕截图
+ 
+ @return <#return value description#>
+ */
++ (UIImage *)screenshotInImageFormat;
 
 
 #pragma mark - Base64

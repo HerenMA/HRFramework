@@ -54,6 +54,7 @@ FOUNDATION_EXPORT const unsigned char HRFrameworkVersionString[];
 
 #import <HRFramework/HRFileUtil.h>
 #import <HRFramework/HRIdentityCardUtil.h>
+#import <HRFramework/HRNullSafe.h>
 #import <HRFramework/HRSysAuthorityUtil.h>
 #import <HRFramework/HRUserDefaultsUtil.h>
 #import <HRFramework/HRValidateUtil.h>

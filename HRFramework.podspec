@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     s.name         = "HRFramework"
     s.summary      = "HerenMA framework for iOS."
-    s.version      = "1.0.5"
+    s.version      = "1.0.6"
     s.license      = { :type => "MIT", :file => "LICENSE" }
     s.authors      = { "MONO" => "yinjianjun1@herenit.com" }
     s.homepage     = "https://github.com/HerenMA/HRFramework"

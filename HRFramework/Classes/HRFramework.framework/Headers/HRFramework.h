@@ -46,7 +46,6 @@ FOUNDATION_EXPORT const unsigned char HRFrameworkVersionString[];
 #import <HRFramework/HRTextField.h>
 #import <HRFramework/HRTextView.h>
 #import <HRFramework/HRView.h>
-#import <HRFramework/HRWebView.h>
 
 #import <HRFramework/HRCache.h>
 #import <HRFramework/HRNetworking.h>

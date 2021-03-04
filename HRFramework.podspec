@@ -15,6 +15,6 @@ Pod::Spec.new do |s|
     s.dependency 'AFNetworking', '~> 4.0.1'
     s.dependency 'YYCategories', '~> 1.0.4'
     s.dependency 'YYModel', '~> 1.0.4'
-    s.dependency 'YYWebImage', '~> 1.0.6'
+    s.dependency 'YYWebImage', '~> 1.0.5'
     s.dependency 'JPImageresizerView', '~> 1.7.8'
 end

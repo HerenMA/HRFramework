@@ -19,6 +19,7 @@ FOUNDATION_EXPORT const unsigned char HRFrameworkVersionString[];
 #import <HRFramework/HRFrameworkMacro.h>
 
 #import <HRFramework/UIActionSheet+Blocks.h>
+#import <HRFramework/UIAlertController+Blocks.h>
 #import <HRFramework/UIAlertView+Blocks.h>
 #import <HRFramework/UIPickerView+Blocks.h>
 

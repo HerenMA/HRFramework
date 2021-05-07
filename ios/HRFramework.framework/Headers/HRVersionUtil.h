@@ -22,7 +22,7 @@
 + (void)getAppVersionWithAppId:(NSString *)appId success:(void (^)(BOOL isUpdated, NSString *version, NSString *releaseNotes, NSString *trackViewUrl))success;
 
 /**
- 显示更新提示（强制更新）
+ 显示更新提示
 
  @param version 新版本号
  @param releaseNotes 更新说明
@@ -46,11 +46,27 @@
  @param version 新版本号
  @param releaseNotes 更新说明
  @param trackViewUrl 查看网址
+ @param forcedUpdate 是否强制
+ */
++ (void)showUpdateTipsWithVersion:(NSString *)version releaseNotes:(NSString *)releaseNotes trackViewUrl:(NSString *)trackViewUrl forcedUpdate:(BOOL)forcedUpdate updatedBlock:(void (^)(void))updatedBlock;
+
+/**
+ 显示更新提示
+
+ @param version 新版本号
+ @param releaseNotes 更新说明
+ @param trackViewUrl 查看网址
  @param versionTextColor 新版本号文本颜色
+ @param forcedUpdate 是否强制
  @param updatedButtonTextColor 立即更新按钮文本颜色
  @param updatedButtonBgColor 立即更新按钮背景颜色
  @param updatedBlock 立即更新 Block
  */
-+ (void)showUpdateTipsWithVersion:(NSString *)version releaseNotes:(NSString *)releaseNotes trackViewUrl:(NSString *)trackViewUrl versionTextColor:(UIColor *)versionTextColor updatedButtonTextColor:(UIColor *)updatedButtonTextColor updatedButtonBgColor:(UIColor *)updatedButtonBgColor updatedBlock:(void (^)(void))updatedBlock;
++ (void)showUpdateTipsWithVersion:(NSString *)version releaseNotes:(NSString *)releaseNotes trackViewUrl:(NSString *)trackViewUrl
+                 versionTextColor:(UIColor *)versionTextColor
+                     forcedUpdate:(BOOL)forcedUpdate
+           updatedButtonTextColor:(UIColor *)updatedButtonTextColor
+             updatedButtonBgColor:(UIColor *)updatedButtonBgColor
+                     updatedBlock:(void (^)(void))updatedBlock;
 
 @end

@@ -10,12 +10,12 @@
 
 @class HRTextField;
 
-@protocol HRTextFieldDelegate<NSObject>
+@protocol HRTextFieldDelegate <NSObject>
 @optional
 - (void)textFieldReturnKeyPress:(HRTextField *)textField;
+- (void)deleteBackward:(HRTextField *)textField;
 
 @end
-
 
 typedef NS_ENUM(NSInteger, LimitType) {
     /// 截取字符串
@@ -23,7 +23,6 @@ typedef NS_ENUM(NSInteger, LimitType) {
     /// 无法输入
     UnableToEnter = 1
 };
-
 
 /**
  单行文本框

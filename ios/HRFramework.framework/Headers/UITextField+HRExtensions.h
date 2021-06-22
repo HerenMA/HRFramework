@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/// 监听删除按钮
+extern NSString *const UITextFieldDidDeleteBackwardNotification;
+
 /**
  UITextField 分类
  */

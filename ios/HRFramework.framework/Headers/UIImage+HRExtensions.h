@@ -203,6 +203,20 @@
 /// @param size 头像大小
 + (UIImage *)circleImageWithText:(NSString *)text textColor:(UIColor *)textColor fontSize:(CGFloat)fontSize bgColor:(UIColor *)bgColor size:(CGSize)size;
 
+/// 创建方型单色背景、中间文字头像
+/// @param text 文字
+/// @param bgColor 背景颜色
+/// @param size 头像大小
++ (UIImage *)squareImageWithText:(NSString *)text bgColor:(UIColor *)bgColor size:(CGSize)size;
+
+/// 创建方型单色背景、中间文字头像
+/// @param text 文字
+/// @param textColor 文字颜色
+/// @param fontSize 文字字体大小
+/// @param bgColor 背景颜色
+/// @param size 头像大小
++ (UIImage *)squareImageWithText:(NSString *)text textColor:(UIColor *)textColor fontSize:(CGFloat)fontSize bgColor:(UIColor *)bgColor size:(CGSize)size;
+
 #pragma mark - 截图
 /**
  屏幕截图

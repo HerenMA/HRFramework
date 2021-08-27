@@ -21,7 +21,7 @@
 #define HR_ScreenHeight [UIScreen mainScreen].bounds.size.height
 
 /// iPhone X / iPhone XS / iPhone XR / iPhone 11 / iPhone 12
-#define HR_iPhoneX (@available(iOS 11.0, *) ? [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bottom > 0.f ? YES : NO : NO)
+#define HR_iPhoneX ({ BOOL iPhoneX; if (@available(iOS 11.0, *)) { iPhoneX = [UIApplication sharedApplication].delegate.window.safeAreaInsets.bottom > 0.f ? YES : NO; } else { iPhoneX = NO; }(iPhoneX); })
 
 /// Status bar height.
 #define HR_StatusBarHeight (HR_iPhoneX ? 44.f : 20.f)

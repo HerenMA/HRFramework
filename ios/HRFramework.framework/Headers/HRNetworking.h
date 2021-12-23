@@ -68,8 +68,8 @@ typedef void (^HRHttpRequestCache)(id responseCache);
 typedef void (^HRHttpRequestSuccess)(id responseObject);
 /** 请求失败的Block */
 typedef void (^HRHttpRequestFailed)(NSInteger errorCode, NSString *errorDescription);
-/** 请求失败V2的Block */
-typedef void (^HRHttpRequestFailure)(NSInteger errorCode, NSString *errorDescription, NSError *error);
+/** 请求失败的BlockV2 */
+typedef void (^HRHttpRequestFailure)(NSInteger errorCode, NSString *errorDescription, NSError *error, id parameters);
 /** 请求进度的Block */
 typedef void (^HRHttpRequestProgress)(NSUInteger fractionCompleted);
 /** 下载完成的Block */

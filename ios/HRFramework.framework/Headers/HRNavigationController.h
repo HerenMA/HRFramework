@@ -35,21 +35,13 @@
 /// 屏幕旋转方向
 @property (assign, nonatomic) UIInterfaceOrientationMask interfaceOrientationMask;
 
-
-/**
- Returns the popped controller.
-
- @param animationTransition <#animationTransition description#>
- @return <#return value description#>
- */
+/// Returns the popped controller.
+/// @param animationTransition <#animationTransition description#>
 - (UIViewController *)popViewControllerAnimationTransition:(UIViewAnimationTransition)animationTransition;
 
-/**
- Uses a horizontal slide transition. Has no effect if the view controller is already in the stack.
- 
- @param viewController <#viewController description#>
- @param animationTransition <#animationTransition description#>
- */
+/// Uses a horizontal slide transition. Has no effect if the view controller is already in the stack.
+/// @param viewController <#viewController description#>
+/// @param animationTransition <#animationTransition description#>
 - (void)pushViewController:(UIViewController *)viewController animationTransition:(UIViewAnimationTransition)animationTransition;
 
 @end

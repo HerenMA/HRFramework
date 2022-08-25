@@ -46,4 +46,12 @@
  */
 + (NSString *)getIdentityCardSex:(NSString *)numberStr;
 
+/**
+ 获取出生天数
+ 
+ @param numberStr 身份证
+ @return 出生天数
+ */
++ (NSUInteger)getIdentityCardDaysOfBirth:(NSString *)numberStr;
+
 @end

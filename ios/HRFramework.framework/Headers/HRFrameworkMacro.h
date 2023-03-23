@@ -15,23 +15,41 @@
     #define DMLog(...) do { } while (0)
 #endif
 
-// UIScreen width.
-#define HR_ScreenWidth [UIScreen mainScreen].bounds.size.width
-// UIScreen height.
-#define HR_ScreenHeight [UIScreen mainScreen].bounds.size.height
+// Screen width.
+#define HR_ScreenWidth                     [UIScreen mainScreen].bounds.size.width
+// Screen height.
+#define HR_ScreenHeight                    [UIScreen mainScreen].bounds.size.height
 
-/// iPhone X / iPhone XS / iPhone XR / iPhone 11 / iPhone 12
-#define HR_iPhoneX ({ BOOL iPhoneX; if (@available(iOS 11.0, *)) { iPhoneX = [UIApplication sharedApplication].delegate.window.safeAreaInsets.bottom > 0.f ? YES : NO; } else { iPhoneX = NO; }(iPhoneX); })
-
-/// Status bar height.
-#define HR_StatusBarHeight (HR_iPhoneX ? 44.f : 20.f)
-/// Navigation bar height.
-#define HR_NavigationBarHeight 44.f
-/// Tabbar height.
-#define HR_TabbarHeight (HR_iPhoneX ? (49.f + 34.f) : 49.f)
-/// Tabbar safe bottom margin.
-#define HR_TabbarSafeBottomMargin (HR_iPhoneX ? 34.f : 0.f)
-/// Status bar & navigation bar height.
-#define HR_StatusBarAndNavigationBarHeight (HR_iPhoneX ? 88.f : 64.f)
+/// iPhone X / iPhone XS / iPhone XR / iPhone 11 / iPhone 12 / iPhone 13 / iPhone 14
+#define HR_iPhoneX \
+    ({ \
+        BOOL iPhoneX = NO; \
+        if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) { \
+            iPhoneX = NO; \
+        } else { \
+            CGSize size = [UIScreen mainScreen].bounds.size; \
+            NSInteger notchValue = size.width / size.height * 100; \
+            iPhoneX = (notchValue == 216 || notchValue == 46) ? YES : NO; \
+        } \
+        (iPhoneX); \
+    })
+/// StatusBar height.
+#define HR_StatusBarHeight \
+    ({ \
+        CGFloat statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height; \
+        if (@available(iOS 13.0, *)) { \
+            UIWindowScene *windowScene = (UIWindowScene *)[UIApplication sharedApplication].connectedScenes.anyObject; \
+            statusBarHeight = windowScene.statusBarManager.statusBarFrame.size.height; \
+        } \
+        (statusBarHeight); \
+    })
+/// NavigationBar height.
+#define HR_NavigationBarHeight             44.f
+/// StatusBar & NavigationBar height.
+#define HR_StatusBarAndNavigationBarHeight (HR_StatusBarHeight + HR_NavigationBarHeight)
+/// TabBar height.
+#define HR_TabBarHeight                    (49.f + HR_BottomSafeArea)
+/// Bottom safeArea .
+#define HR_BottomSafeArea                  (HR_iPhoneX ? 34.f : 0.f)
 
 #endif

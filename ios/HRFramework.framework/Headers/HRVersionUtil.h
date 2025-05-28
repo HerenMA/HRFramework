@@ -14,7 +14,7 @@
 @interface HRVersionUtil : NSObject
 
 /**
- 获取App版本
+ 获取App版本号
 
  @param appId AppId
  @param success <#success description#>
